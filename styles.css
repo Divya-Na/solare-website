@@ -13,8 +13,19 @@ body {
     color: white;
     text-align: center;
     padding: 50px 20px;
+    position: relative; /* Allow logo to be positioned within the header */
 }
 
+/* Logo Positioning */
+.logo {
+    position: absolute;
+    top: 20px;    /* Adjust the top distance */
+    left: 20px;   /* Adjust the left distance */
+    width: 200px; /* Set the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Header Text */
 .header h1 {
     font-size: 3em;
     margin-bottom: 10px;
@@ -38,30 +49,13 @@ body {
     background: #00251a;
 }
 
-/* Image Section - Positioning the image at the top-left */
-.image-container {
-    position: absolute;  /* Absolute positioning */
-    top: 0;
-    left: 0;
-    width: 100%;  /* Optionally adjust the width of the container */
-    height: auto;
-    overflow: hidden;  /* Prevent the image from overflowing */
-}
-
-.scroll-image {
-    width: auto;  /* Adjust image width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover;  /* Ensures the image covers the container properly */
-}
-
-/* Content Container */
+/* Content Sections */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-/* Sections */
 .about, .services, .contact {
     padding: 20px 0;
 }
