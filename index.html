@@ -7,55 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>SolaRe Renewing Solar, Reviving the Planet</h1>
-        <p>Making the future greener with solar energy</p>
-        <a href="#" class="cta">Join Us</a>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>SolaRe</h1>
+            <p>Renewing Solar, Reviving the Planet</p>
+            <a href="#services" class="cta">Explore Our Services</a>
+        </div>
+    </header>
 
+    <!-- Image Section -->
     <div class="image-container">
         <img src="GSJ.jpg" alt="Divya's Picture" class="scroll-image">
     </div>
 
-    <div class="container">
-        <section class="about">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
             <h2>About Us</h2>
-            <p>We are dedicated to utilizing solar energy for a better future.</p>
-        </section>
+            <p>SolaRe is dedicated to tackling the challenge of solar panel waste. With innovative recycling solutions, we recover critical materials to fuel a sustainable, circular economy.</p>
+        </div>
+    </section>
 
-        <section class="services">
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
             <h2>Our Services</h2>
             <div class="service-item">
-                <h3>Solar Panel Installation</h3>
-                <p>We offer professional installation of solar panels for homes and businesses.</p>
+                <h3>Solar Panel Recycling</h3>
+                <p>Efficient recycling of end-of-life solar panels to recover valuable materials like silicon and rare metals.</p>
             </div>
             <div class="service-item">
-                <h3>Solar Maintenance</h3>
-                <p>Our maintenance services ensure your solar system works at peak performance.</p>
+                <h3>Sustainability Solutions</h3>
+                <p>Helping industries adopt circular practices and reduce environmental impact.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name</label>
+            <form id="contact-form">
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
                 
-                <button type="submit">Send Message</button>
+                <button type="submit">Send</button>
             </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <p>&copy; 2024 SolaRe. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    height: 200vh; /* Ensures there's enough scroll space */
 }
 
 /* Header Section */
@@ -39,20 +38,20 @@ body {
     background: #00251a;
 }
 
-/* Image Section */
+/* Image Section - Positioning the image at the top-left */
 .image-container {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+    position: absolute;  /* Absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Optionally adjust the width of the container */
+    height: auto;
+    overflow: hidden;  /* Prevent the image from overflowing */
 }
 
 .scroll-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    transition: transform 0.2s ease-out; /* Smooth transition for the image */
+    width: auto;  /* Adjust image width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover;  /* Ensures the image covers the container properly */
 }
 
 /* Content Container */
@@ -113,14 +112,3 @@ form button:hover {
     text-align: center;
     padding: 10px 0;
 }
-
-/* Scroll effect */
-body {
-    height: 200vh; /* To ensure scrolling */
-}
-
-window.addEventListener('scroll', function () {
-    const image = document.querySelector('.scroll-image');
-    let scrollPosition = window.scrollY;
-    image.style.transform = `translateX(${scrollPosition * 0.5}px)`; /* Adjust the multiplier for desired movement */
-});
