@@ -5,6 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    height: 200vh; /* Ensures there's enough scroll space */
 }
 
 /* Header Section */
@@ -38,13 +39,30 @@ body {
     background: #00251a;
 }
 
-/* Section Styling */
+/* Image Section */
+.image-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.scroll-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-out; /* Smooth transition for the image */
+}
+
+/* Content Container */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
 }
 
+/* Sections */
 .about, .services, .contact {
     padding: 20px 0;
 }
@@ -95,3 +113,14 @@ form button:hover {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Scroll effect */
+body {
+    height: 200vh; /* To ensure scrolling */
+}
+
+window.addEventListener('scroll', function () {
+    const image = document.querySelector('.scroll-image');
+    let scrollPosition = window.scrollY;
+    image.style.transform = `translateX(${scrollPosition * 0.5}px)`; /* Adjust the multiplier for desired movement */
+});
