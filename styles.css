@@ -1,12 +1,23 @@
 /* Header Section */
 .header {
-    background: #00796b; 
-    color: white;
+    background: white; 
+    color: black;
     text-align: center;
     padding: 50px 20px;
     position: relative;
 }
 
+/* Our Services Button */
+.cta {
+    background: #004d40;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
 /* Contact Us Button */
 .cta {
     background: #004d40;
